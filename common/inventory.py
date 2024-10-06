@@ -52,10 +52,7 @@ class Inventory:
             return f"can not get product from an empty list or product name is not valid"
 
     def total_inventory_value(self) -> float:
-        sum = 0
         if self.products != []:
-            for item in self.products:
-                sum += item['price'] * item['quantity']
-            return sum
+            return sum( item['price'] * item['quantity'] for item in self.products)
         else:
             return 0
