@@ -6,7 +6,8 @@ def test_remove_exist_product_from_inventory(get_inventory):
     assert product_removed == f"product {product_name} was removed from inventory", "product was not removed"
 
     res = get_inventory.get_product(product_name)
-    assert res == "can not get product from an empty list or product name is not valid", "product is in the list"
+
+    assert res == f"{product_name} is not in the list.", "product is in the list"
 
 def test_remove_unexist_product_from_inventory(get_inventory):
     product_name = "Samsung Galaxy 3"

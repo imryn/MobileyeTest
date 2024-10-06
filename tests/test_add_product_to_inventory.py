@@ -10,6 +10,13 @@ def test_add_new_product_to_inventory(get_inventory):
     res = get_inventory.get_product(product['name'])
     assert res == product, f"product is not in inventory. look at {res}."
 
+def test_add_product_that_already_exists_in_inventory(get_inventory):
+    product = {"name": "Iphone 14", "product_id": "162243XZ", "price": 320, "quantity": 2}
+    product_added = get_inventory.add_product(product)
+
+    assert product_added == 'quantity of the product is being increased.'
+
+
 @pytest.mark.parametrize('product_with_invalid_name',[{"name": None, "product_id": "3243XZ", "price": 450, "quantity": 1},
                                                  {"name": 0, "product_id": "3243XZ", "price": 450, "quantity": 1},
                                                  {"name": "undefined", "product_id": "3243XZ", "price": 450, "quantity": 1}])

@@ -14,27 +14,32 @@ class Inventory:
 
     def add_product(self, product: Product):
         valid_name = self.check_valid_product_name(product['name'])
+        exists = False
         if valid_name:
             for item in self.products:
-                if product['name'] == item['name']:
+                if item['name'] == product['name']:
                     item['quantity'] += product['quantity']
+                    exists = True
+                    return f"quantity of the product is being increased."
 
-                else:
-                    self.products.append(product)
-                    return f"product {product['name']} was added to inventory."
+            if exists == False:
+                self.products.append(product)
+                return f"product {product['name']} was added to inventory."
 
         else:
             return "can not add product to inventory with invalid name"
 
     def remove_product(self, product_name):
         valid_name = self.check_valid_product_name(product_name)
+
         if valid_name and self.products != []:
             for item in self.products:
                   if item['name'] == product_name:
-                    self.products.remove(item)
-                    return f"product {item['name']} was removed from inventory"
-                  else:
-                    return f"can not remove not exist {product_name}."
+                      self.products.remove(item)
+                      return f"product {item['name']} was removed from inventory"
+
+            return f"can not remove not exist {product_name}."
+
         else:
             return f"can not remove product from an empty list or product_name is not valid"
 
