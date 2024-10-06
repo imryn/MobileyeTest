@@ -7,27 +7,24 @@ class Inventory:
 
     @staticmethod
     def check_valid_product_name(product_name):
-        if product_name == None or product_name == 'undefined' or product_name == 0:
-            return False
-        else:
-            return True;
+        return product_name not in (None, 'undefined', 0)
 
     def add_product(self, product: Product):
         valid_name = self.check_valid_product_name(product['name'])
         exists = False
-        if valid_name:
-            for item in self.products:
-                if item['name'] == product['name']:
-                    item['quantity'] += product['quantity']
-                    exists = True
-                    return f"quantity of the product is being increased."
+        if not valid_name:
+            return "can not add product to inventory with invalid name"
+
+        for item in self.products:
+            if item['name'] == product['name']:
+                item['quantity'] += product['quantity']
+                exists = True
+                return f"Quantity of the product is being increased."
 
             if exists == False:
                 self.products.append(product)
                 return f"product {product['name']} was added to inventory."
 
-        else:
-            return "can not add product to inventory with invalid name"
 
     def remove_product(self, product_name):
         valid_name = self.check_valid_product_name(product_name)
