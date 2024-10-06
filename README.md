@@ -11,3 +11,11 @@ in this project I developed several methods related to inventory.
  - install python to your computer
  - after you open the project in pycharm or another tool, run this on your terminal:
 ``` pip install -r requirements.txt ```
+
+## running the tests
+
+two options for running the tests:
+1. if you want to run everything without getting report:
+run this on your terminal: ``` pytest tests ``` 
+2. if you want to run everything and getting report:
+run this on your terminal: ``` pytest tests --html=report.html ``` 
