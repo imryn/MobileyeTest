@@ -2,13 +2,14 @@ from common.product import Product
 
 class Inventory:
 
-    def __init__(self, products):
+    def __init__(self, products: list):
         self.products = products
 
     @staticmethod
-    def check_valid_product_name(product_name):
+    def check_valid_product_name(product_name: str):
         return product_name not in (None, 'undefined', 0)
 
+    """add product to products list"""
     def add_product(self, product: Product):
         valid_name = self.check_valid_product_name(product['name'])
         exists = False
@@ -25,8 +26,8 @@ class Inventory:
                 self.products.append(product)
                 return f"product {product['name']} was added to inventory."
 
-
-    def remove_product(self, product_name):
+    """remove product from products list"""
+    def remove_product(self, product_name: str):
         valid_name = self.check_valid_product_name(product_name)
 
         if valid_name and self.products != []:
@@ -40,7 +41,8 @@ class Inventory:
         else:
             return f"can not remove product from an empty list or product_name is not valid"
 
-    def get_product(self, product_name) -> Product:
+    """get specific product from products list"""
+    def get_product(self, product_name: str) -> Product:
         valid_name = self.check_valid_product_name(product_name)
         if valid_name and self.products != []:
             for item in self.products:
@@ -51,6 +53,7 @@ class Inventory:
         else:
             return f"can not get product from an empty list or product name is not valid"
 
+    """get total_inventory_value from products list"""
     def total_inventory_value(self) -> float:
         if self.products != []:
             return sum( item['price'] * item['quantity'] for item in self.products)

@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3e30179b-3c3c-4b5c-bc46-d877ff76fcc0" name="Changes" comment="" />
+    <list default="true" id="3e30179b-3c3c-4b5c-bc46-d877ff76fcc0" name="Changes" comment="update total_inventory_value to be more readble">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/inventory.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/inventory.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conftest.py" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -45,6 +50,54 @@
       <option name="presentableId" value="Default" />
       <updated>1727852455653</updated>
     </task>
+    <task id="LOCAL-00001" summary="update the readme file for explanation how to run the tests">
+      <created>1728221434395</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1728221434395</updated>
+    </task>
+    <task id="LOCAL-00002" summary="update method check_valid_product_name">
+      <created>1728241228270</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1728241228270</updated>
+    </task>
+    <task id="LOCAL-00003" summary="update the assertion in add_product_to_inventory because of the changing in inventory file">
+      <created>1728241358859</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1728241358859</updated>
+    </task>
+    <task id="LOCAL-00004" summary="update total_inventory_value to be more readble">
+      <created>1728241628099</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1728241628099</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="update the readme file for explanation how to run the tests" />
+    <MESSAGE value="update method check_valid_product_name" />
+    <MESSAGE value="update the assertion in add_product_to_inventory because of the changing in inventory file" />
+    <MESSAGE value="update total_inventory_value to be more readble" />
+    <option name="LAST_COMMIT_MESSAGE" value="update total_inventory_value to be more readble" />
   </component>
 </project>
